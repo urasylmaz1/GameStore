@@ -14,4 +14,5 @@ builder.Services.AddSqlite<GameStoreContext>(connString);
 var app = builder.Build();
 
 app.MapGamesEndpoints();
+app.MigrateDb(); // Apply migrations at startup
 app.Run();
